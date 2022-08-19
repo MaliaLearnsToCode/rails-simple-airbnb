@@ -1,0 +1,16 @@
+<h2>Welcone to this lovely home!</h2>
+
+<h1> <%= @flat.name %></h1>
+  <p> Address: <%= @flat.address %></p>
+  <p> <%= @flat.number_of_guests %></p>
+  <p> <%= @flat.price_per_night %></p>
+  <p> <%= @flat.description %></p>
+
+<%= link_to "Edit this flat", edit_flat_path %> |
+
+<%= link_to "Delete this flat",
+  flat_path(@flat),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%> |
+
+<%= link_to "Back to all flats", flats_path %>

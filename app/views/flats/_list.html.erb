@@ -1,0 +1,16 @@
+<h1><%= @flat.name %></h1>
+<div id="flat">
+  <% @flats.each do |flat| %>
+    <%= render flat %>
+    <p>
+      <li><%= link_to flat.name, flat_path(flat), class:"text-decoration-none bold" %></li>
+      <%= flat.address %>
+      <%= flat.number_of_guests %>
+      <%= flat.price_per_night %>
+      <%= flat.description %>
+    </p>
+  <% end %>
+</div>
+
+
+<%# <%= render "flats/list", flats: @flats %>
